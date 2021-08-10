@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "analyze": "cross-env ANALYZE=true yarn build",
+    "serve": "serve .next/analyze",
+    "lint": "next lint",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^1.21.0",
+    "evergreen-ui": "^6.3.0",
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rebass": "^4.0.7",
+    "swr": "^0.5.6"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^11.0.1",
+    "@types/node": "^12.12.21",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.0.1",
+    "serve": "^12.0.0",
+    "typescript": "^4.3.5"
+  },
+  "license": "MIT"
+}
