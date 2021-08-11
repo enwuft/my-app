@@ -1,33 +1,33 @@
-import React from "react";
-import { Pane, Heading } from "evergreen-ui";
+import React from 'react'
+import { Pane, Heading } from 'evergreen-ui'
+import Box from 'rebass'
+import List from './List'
 
 export const Navbar = () => {
-  const bgColor = "#314769";
-  const typoColor = "#e4e7eb";
-  const styles = {
-    navbar: {
-      display: "flex",
-      alignItems: "center",
-      height: 60,
-      borderBottom: "1px solid #E4E7EB",
-    },
-    logoContainer: {
-      display: "flex",
-      alignItems: "center",
-      width: "30%",
-      height: "100%",
-    },
-    logo: {
-      color: typoColor,
-    },
-  };
   return (
-    <Pane style={styles.navbar} background={bgColor}>
-      <Pane style={styles.logoContainer} className="p-left">
-        <Heading size={700} style={styles.logo}>
-          Dashboard
-        </Heading>
+    <>
+      <Pane
+        fontFamily="sans-serif"
+        display="flex"
+        padding={2}
+        backgroundColor="#101840"
+      >
+        <Pane className="container mx-auto">
+          <img
+            src="http://www2.chainat.ac.th/vecskills/images/vecskills_bw_logo.png"
+            className="bg-cover w-16 p-1"
+          />
+          {/* <Heading size={500}>VEC Skill</Heading> */}
+        </Pane>
       </Pane>
-    </Pane>
-  );
-};
+      <Pane
+        fontFamily="sans-serif"
+        display="flex"
+        padding={4}
+        backgroundColor="#ebedf5"
+      >
+        <List />
+      </Pane>
+    </>
+  )
+}

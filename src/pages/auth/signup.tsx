@@ -1,17 +1,10 @@
-import React from "react";
-import Link from "next/link";
-import { Box, Flex } from "rebass";
-import {
-  Pane,
-  Heading,
-  TextInputField,
-  Button,
-  Text,
-  TextInput,
-} from "evergreen-ui";
+import React from 'react'
+import Link from 'next/link'
+import { Box, Flex } from 'rebass'
+import { Pane, Heading, TextInputField, Button, Text } from 'evergreen-ui'
 
 export default function Signup() {
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = React.useState('')
   return (
     <Box>
       <Flex justifyContent="center">
@@ -29,8 +22,8 @@ export default function Signup() {
             </Heading>
             <TextInputField
               required
+              type="text"
               label="Email"
-              type="email"
               validationMessage="This field is required"
             />
             <TextInputField
@@ -43,14 +36,14 @@ export default function Signup() {
               Log in
             </Button>
             <Text textAlign="center" marginTop="2rem">
-              Forgot your password? <Link href="#"> Reset your password</Link>
+              Forgot your password? <Link href="/a"> Reset your password</Link>
             </Text>
             <Text textAlign="center">
-              Don&rsquo;t have an account? <Link href="#">Sign up</Link>
+              Don&rsquo;t have an account? <Link href="/s">Sign up</Link>
             </Text>
           </Pane>
         </Box>
       </Flex>
     </Box>
-  );
+  )
 }

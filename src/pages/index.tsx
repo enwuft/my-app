@@ -1,5 +1,6 @@
-import Layout from "../components/Layout";
-import Signup from "./auth/signup";
+import React, { useState } from 'react'
+import Layout from '../components/Layout'
+import Signup from './auth/signup'
 import {
   Button,
   Pane,
@@ -7,16 +8,35 @@ import {
   majorScale,
   Autocomplete,
   TextInput,
-} from "evergreen-ui";
-import { Navbar } from "components/widgets";
+  CornerDialog
+} from 'evergreen-ui'
+import { Navbar } from 'components/widgets'
 
-const IndexPage = () => (
-  <Layout title="Home">
-    <Pane display="flex" marginX={majorScale(2)}>
-      <Navbar />
-    </Pane>
-    <Signup />
-  </Layout>
-);
+function Index() {
+  let state = {
+    isShown: true,
+    selectedIndex: 0,
+    tabs: ['Traits', 'Event History', 'Identities']
+  }
+  const isShown = React.useState(false)
+  return (
+    <React.Fragment>
+      <Layout title="Home">
+        <Pane display="flex" marginX={majorScale(2)}></Pane>
+        <Signup />
+        <CornerDialog
+          title="We’d love to hear from you!"
+          isShown={state.isShown}
+          onCloseComplete={() => this.useState({ isShown: false })}
+          confirmLabel="Accept"
+          onConfirm={close => close()}
+        >
+          Help shape Segment’s data governance product roadmap. If you’re
+          willing to provide feedback, let’s chat.
+        </CornerDialog>
+      </Layout>
+    </React.Fragment>
+  )
+}
 
-export default IndexPage;
+export default Index
