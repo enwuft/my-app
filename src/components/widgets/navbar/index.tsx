@@ -10,6 +10,7 @@ export const Navbar = () => {
         fontFamily="sans-serif"
         display="flex"
         padding={2}
+        width="100%"
         backgroundColor="#101840"
       >
         <Pane className="container mx-auto">
@@ -20,12 +21,7 @@ export const Navbar = () => {
           {/* <Heading size={500}>VEC Skill</Heading> */}
         </Pane>
       </Pane>
-      <Pane
-        fontFamily="sans-serif"
-        display="flex"
-        padding={4}
-        backgroundColor="#ebedf5"
-      >
+      <Pane fontFamily="sans-serif" backgroundColor="#ebedf5">
         <List />
       </Pane>
     </>

@@ -23,7 +23,6 @@ function Index() {
     <React.Fragment>
       <Layout title="Home">
         <Pane display="flex" marginX={majorScale(2)}></Pane>
-        <Signup />
         <CornerDialog
           title="We’d love to hear from you!"
           isShown={state.isShown}

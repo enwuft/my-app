@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Box, Flex } from 'rebass'
 import { Pane, Heading, TextInputField, Button, Text } from 'evergreen-ui'
 
-export default function SignUp() {
+export default function SignIn() {
   const [value, setValue] = React.useState('')
   return (
     <Box>
