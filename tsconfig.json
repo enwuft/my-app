@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": "./src/",
     "paths": {},
-    "target": "es5",
+    "target": "es6",
+    "sourceMap": false,
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
+    "types": ["node"],
     "skipLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,

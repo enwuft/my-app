@@ -8,10 +8,13 @@ import {
   Autocomplete,
   TextInput,
 } from "evergreen-ui";
+import { Navbar } from "components/widgets";
 
 const IndexPage = () => (
   <Layout title="Home">
-    <Pane display="flex" marginX={majorScale(2)}></Pane>
+    <Pane display="flex" marginX={majorScale(2)}>
+      <Navbar />
+    </Pane>
     <Signup />
   </Layout>
 );

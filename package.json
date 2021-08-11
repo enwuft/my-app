@@ -1,4 +1,6 @@
 {
+  "name": "web",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "dev": "next",
@@ -6,13 +8,17 @@
     "start": "next start",
     "analyze": "cross-env ANALYZE=true yarn build",
     "serve": "serve .next/analyze",
-    "lint": "next lint",
-    "type-check": "tsc"
+    "lint": "eslint --fix -c ./eslintrc './src/**/*.{ts,tsx}'",
+    "type-check": "tsc",
+    "test": "jest"
   },
   "dependencies": {
     "@supabase/supabase-js": "^1.21.0",
+    "axios": "^0.21.1",
+    "core-js": "^3.16.1",
     "evergreen-ui": "^6.3.0",
     "next": "latest",
+    "nookies": "^2.5.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rebass": "^4.0.7",
@@ -20,13 +26,20 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^11.0.1",
+    "@types/jest": "^27.0.0",
     "@types/node": "^12.12.21",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
+    "autoprefixer": "^10.3.1",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.0.1",
+    "jest": "^27.0.6",
+    "moment": "^2.29.1",
+    "postcss": "^8.3.6",
+    "prettier": "^2.3.2",
     "serve": "^12.0.0",
+    "tailwindcss": "^2.2.7",
     "typescript": "^4.3.5"
   },
   "license": "MIT"

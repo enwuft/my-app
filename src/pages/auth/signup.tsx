@@ -32,16 +32,12 @@ export default function Signup() {
               label="Email"
               type="email"
               validationMessage="This field is required"
-              onChange={(e) => setValue(e.target.value)}
-              value={value}
             />
             <TextInputField
               required
               type="password"
               label="Password"
               validationMessage="This field is required"
-              onChange={(e) => setValue(e.target.value)}
-              value={value}
             />
             <Button appearance="primary" justifyContent="center">
               Log in
@@ -50,7 +46,7 @@ export default function Signup() {
               Forgot your password? <Link href="#"> Reset your password</Link>
             </Text>
             <Text textAlign="center">
-              Don&apos;t have an account? <Link href="#">Sign up</Link>
+              Don&rsquo;t have an account? <Link href="#">Sign up</Link>
             </Text>
           </Pane>
         </Box>
