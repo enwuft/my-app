@@ -1,7 +1,5 @@
 import React from 'react'
-import { Pane, Heading } from 'evergreen-ui'
-import Box from 'rebass'
-import List from './List'
+import { Pane } from 'evergreen-ui'
 
 export const Navbar = () => {
   return (
@@ -18,11 +16,7 @@ export const Navbar = () => {
             src="http://www2.chainat.ac.th/vecskills/images/vecskills_bw_logo.png"
             className="bg-cover w-16 p-1"
           />
-          {/* <Heading size={500}>VEC Skill</Heading> */}
         </Pane>
-      </Pane>
-      <Pane fontFamily="sans-serif" backgroundColor="#ebedf5">
-        <List />
       </Pane>
     </>
   )

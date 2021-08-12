@@ -9,8 +9,8 @@ type Props = {
   title?: string
 }
 
-const Layout = ({ children, title = 'default' }: Props) => (
-  <div>
+const Layout = ({ children, title = 'Dashboard' }: Props) => (
+  <div className="absulute flex-1">
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
@@ -21,7 +21,11 @@ const Layout = ({ children, title = 'default' }: Props) => (
     </header>
     {children}
     <footer>
-      <span>I&rsquo;m here to stay (Footer)</span>
+      <Pane justifyContent="center" display="flex">
+        <Heading size={400} color="#666666" justifyContent="space-evenly">
+          Made with ♥ by PROGRAMMING.IN.TH team
+        </Heading>
+      </Pane>
     </footer>
   </div>
 )

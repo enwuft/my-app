@@ -1,18 +1,14 @@
 {
   "compilerOptions": {
     "baseUrl": "./src/",
-    "paths": {},
-    "target": "es6",
+    "paths": {
+      "~/*": ["./*"]
+    },
+    "target": "esnext",
     "sourceMap": true, // Generate corrresponding .map file
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
     "skipLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
@@ -24,12 +20,6 @@
     "isolatedModules": true,
     "jsx": "preserve" // Support JSX in .tsx files
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

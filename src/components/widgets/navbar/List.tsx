@@ -1,4 +1,4 @@
-import React, { Fragment, FC } from 'react'
+import React from 'react'
 import { Pane, Heading, Tablist, Tab, Paragraph } from 'evergreen-ui'
 import { Box, Flex } from 'rebass'
 
