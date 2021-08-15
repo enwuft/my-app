@@ -9,8 +9,10 @@ export const Navbar = () => {
         <Pane className="container mx-auto">
           <Image
             src="/vecskills_bw_logo.png"
-            className="bg-cover w-14 p-1"
+            className="bg-cover"
             alt="Logo"
+            width={40}
+            height={35}
           />
         </Pane>
       </Pane>
