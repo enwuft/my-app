@@ -11,7 +11,7 @@ function NavList() {
   ])
   return (
     <Box>
-      <Flex justifyContent="center">
+      <Flex justifyContent="center" fontFamily="Boon">
         <Pane display="flex" padding={4}>
           <Tablist flexBasis={440}>
             {tabs.map((tab, index) => (

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Pane } from 'evergreen-ui';
-import Layout from '../components/Layout';
-import NavList from '~/components/widgets/navbar/List';
+import React from 'react'
+import { Pane } from 'evergreen-ui'
+import Layout from '../components/Layout'
+import NavList from '~/components/widgets/navbar/List'
 
 function Index() {
   return (
@@ -12,7 +12,7 @@ function Index() {
         </Pane>
       </Layout>
     </>
-  );
+  )
 }
 
-export default Index;
+export default Index
