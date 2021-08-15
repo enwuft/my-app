@@ -8,7 +8,7 @@ export const Navbar = () => {
       <Pane display="flex" padding={2} width="100%" backgroundColor="#101840">
         <Pane className="container mx-auto">
           <Image
-            src="/vecskills_bw_logo.png"
+            src="https://res.cloudinary.com/enwuft/image/upload/v1629014172/vecskills_bw_logo_al2ukr.png"
             className="bg-cover"
             alt="Logo"
             width={40}
