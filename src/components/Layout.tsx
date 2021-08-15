@@ -1,7 +1,9 @@
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
 import { Pane, Heading } from 'evergreen-ui'
-import { Navbar } from 'components/widgets'
+import Dymanic from 'next/dynamic'
+const Navbar = Dymanic(() => import('~/components/widgets/navbar'))
+// import { Navbar } from 'components/widgets'
 
 type Props = {
   children?: ReactNode

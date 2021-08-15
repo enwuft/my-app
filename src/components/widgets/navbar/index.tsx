@@ -1,19 +1,11 @@
-import React from 'react'
-import {
-  Pane,
-  Heading,
-  Tablist,
-  Tab,
-  Paragraph,
-  Text,
-  majorScale
-} from 'evergreen-ui'
+import React, { Fragment } from 'react'
+import { Pane, Heading, Tablist, Tab, Paragraph } from 'evergreen-ui'
 import { Box, Flex } from 'rebass'
 import Image from 'next/image'
 
-export const Navbar = () => {
+export default function Navbar() {
   return (
-    <>
+    <Fragment>
       <Pane display="flex" padding={1} width="100%" backgroundColor="#101840">
         <Pane className="container mx-auto">
           <Image
@@ -29,7 +21,7 @@ export const Navbar = () => {
       <Box>
         <NavList />
       </Box>
-    </>
+    </Fragment>
   )
 }
 
@@ -41,7 +33,7 @@ function NavList() {
     'ระดับจังประเทศ'
   ])
   return (
-    <Box>
+    <Fragment>
       <Flex justifyContent="center" fontFamily="Boon">
         <Pane display="flex" padding={4}>
           <Tablist flexBasis={440}>
@@ -80,13 +72,13 @@ function NavList() {
           </Box>
         </Flex>
       </Pane>
-    </Box>
+    </Fragment>
   )
 }
 
 const Header: React.FC = () => {
   return (
-    <React.Fragment>
+    <Fragment>
       <Pane margin={20} display="flex">
         <Image
           src="https://res.cloudinary.com/enwuft/image/upload/v1628959441/cad_wv2imb.png"
@@ -103,6 +95,6 @@ const Header: React.FC = () => {
           </Pane>
         </Box>
       </Pane>
-    </React.Fragment>
+    </Fragment>
   )
 }
