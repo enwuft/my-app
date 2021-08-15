@@ -4,17 +4,12 @@ import { Pane } from 'evergreen-ui'
 export const Navbar = () => {
   return (
     <>
-      <Pane
-        fontFamily="sans-serif"
-        display="flex"
-        padding={2}
-        width="100%"
-        backgroundColor="#101840"
-      >
+      <Pane display="flex" padding={2} width="100%" backgroundColor="#101840">
         <Pane className="container mx-auto">
           <img
-            src="http://www2.chainat.ac.th/vecskills/images/vecskills_bw_logo.png"
-            className="bg-cover w-16 p-1"
+            src="/vecskills_bw_logo.png"
+            className="bg-cover w-14 p-1"
+            alt="Logo"
           />
         </Pane>
       </Pane>

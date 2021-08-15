@@ -8,9 +8,8 @@
     "start": "next start",
     "analyze": "cross-env ANALYZE=true yarn build",
     "serve": "serve .next/analyze",
-    "lint": "eslint --fix -c ./eslintrc './src/**/*.{ts,tsx}'",
     "type-check": "tsc",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "dependencies": {
     "@supabase/supabase-js": "^1.21.0",
@@ -26,22 +25,22 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^11.0.1",
-    "@types/jest": "^27.0.0",
+    "@types/jest": "^27.0.1",
     "@types/node": "^16.6.1",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
     "@types/rebass": "^4.0.9",
-    "@typescript-eslint/eslint-plugin": "^4.29.1",
     "autoprefixer": "^10.3.1",
+    "babel-jest": "^27.0.6",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.0.1",
-    "eslint-plugin-prettier": "^3.4.0",
     "jest": "^27.0.6",
     "postcss": "^8.3.6",
     "prettier": "^2.3.2",
     "serve": "^12.0.0",
     "tailwindcss": "^2.2.7",
+    "ts-jest": "^27.0.4",
     "typescript": "^4.3.5"
   },
   "license": "MIT"

@@ -1,15 +1,21 @@
 module.exports = {
-  preset: "ts-jest",
-  testEnvironment: "jsdom",
-  clearMocks: true,
+  roots: ['<rootDir>'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  setupFiles: ['<rootDir>/config/setup.js'],
+  testEnvironment: 'jsdom',
+  globals: {
+    'ts-jest': {
+      tsconfig: 'jest.tsconfig.json'
+    }
+  },
   transform: {
-    "^.+\\.tsx?$": "babel-jest",
+    '^.+\\.(ts|tsx)$': 'ts-jest'
   },
+  testURL: 'http://localhost',
+  testRegex: '.*\\.(test|spec)\\.tsx?$',
   moduleNameMapper: {
-    "\\.svg$": "<rootDir>/src/__mocks__/svgrMock.ts",
-    "^src/(.+)": "<rootDir>/src/$1",
-    "\\.(css|less)$": "identity-obj-proxy",
+    '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
+    '\\.(gif|ttf|eot|svg)$': '<rootDir>/__mocks__/fileMock.js'
   },
-  setupFiles: ["jest-canvas-mock"],
-  setupFilesAfterEnv: ["./jest.setup.regenerator-runtime.js"],
-};
+  snapshotSerializers: ['enzyme-to-json/serializer']
+}

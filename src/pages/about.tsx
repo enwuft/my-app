@@ -1,8 +1,5 @@
-import Link from "next/link";
-import Layout from "../components/Layout";
-import { Box, Flex } from "rebass";
-import { Pane, Heading, TextInputField, Button, Text } from "evergreen-ui";
+import Layout from '../components/Layout'
 
-const AboutPage = () => <Layout title="About"></Layout>;
+const AboutPage = () => <Layout title="About"></Layout>
 
-export default AboutPage;
+export default AboutPage
