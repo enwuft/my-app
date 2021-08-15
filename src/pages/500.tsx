@@ -1,6 +1,6 @@
 import { Pane } from 'evergreen-ui'
 
-export const ServerErr: React.FC = () => {
+export default function ServerErr() {
   return (
     <Pane>
       <span>500 Server Error</span>

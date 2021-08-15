@@ -10,7 +10,7 @@ type Props = {
 }
 
 const Layout = ({ children, title = 'Dashboard' }: Props) => (
-  <div className="absulute flex-1">
+  <div>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />

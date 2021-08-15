@@ -7,3 +7,5 @@ const AdminList: React.FC = () => {
     </Pane>
   )
 }
+
+export default AdminList

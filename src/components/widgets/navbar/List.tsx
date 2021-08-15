@@ -28,7 +28,7 @@ function NavList() {
           </Tablist>
         </Pane>
       </Flex>
-      <Box>
+      {/* <Box>
         <Pane padding={16} background="tint1" flex={1}>
           {tabs.map((tab, index) => (
             <Pane
@@ -43,7 +43,7 @@ function NavList() {
             </Pane>
           ))}
         </Pane>
-      </Box>
+      </Box> */}
     </Box>
   )
 }

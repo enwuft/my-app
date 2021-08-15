@@ -6,6 +6,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "lint": "next lint",
     "analyze": "cross-env ANALYZE=true yarn build",
     "serve": "serve .next/analyze",
     "type-check": "tsc",

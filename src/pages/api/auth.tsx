@@ -1,5 +1,5 @@
-import { supabase } from "utils/initSupabase";
+import { supabase } from 'utils/initSupabase'
 
-export default function handler(req, res) {
-  supabase.auth.api.setAuthCookie(req, res);
+export default function handler(req: any, res: any) {
+  supabase.auth.api.setAuthCookie(req, res)
 }
