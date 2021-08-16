@@ -7,6 +7,7 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="UTF-8" />
           <meta content="ie=edge" httpEquiv="X-UA-Compatible" />
+          <link rel="icon" type="image/ico" href="/favicon-32x32.png" />
           <link
             as="font"
             crossOrigin="anonymous"
