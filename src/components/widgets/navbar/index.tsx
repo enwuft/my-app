@@ -2,20 +2,19 @@ import React, { Fragment } from 'react'
 import { Pane, Heading, Tablist, Tab, Paragraph } from 'evergreen-ui'
 import { Box, Flex } from 'rebass'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Navbar() {
   return (
     <Fragment>
-      <Pane display="flex" padding={1} width="100%" backgroundColor="#101840">
-        <Pane className="container mx-auto">
-          <Image
-            src="https://res.cloudinary.com/enwuft/image/upload/v1629014172/vecskills_bw_logo_al2ukr.png"
-            className="bg-cover"
-            alt="Logo"
-            width={40}
-            height={35}
-          />
-        </Pane>
+      <Pane display="flex" padding={4} width="100%" backgroundColor="#101840">
+        <Image
+          src="https://res.cloudinary.com/enwuft/image/upload/v1629014172/vecskills_bw_logo_al2ukr.png"
+          className="bg-cover w-full"
+          alt="Logo"
+          width={40}
+          height={35}
+        />
       </Pane>
 
       <Box>
@@ -51,6 +50,7 @@ function NavList() {
           </Tablist>
         </Pane>
       </Flex>
+
       <Pane>
         <Flex className="flex bg-gray-50" justifyContent="center">
           <Box width={[2 / 3]}>
@@ -79,21 +79,36 @@ function NavList() {
 const Header: React.FC = () => {
   return (
     <Fragment>
-      <Pane margin={20} display="flex">
-        <Image
+      <Pane paddingTop={16} display="flex">
+        <img
           src="https://res.cloudinary.com/enwuft/image/upload/v1628959441/cad_wv2imb.png"
-          width="100"
-          height="100"
           alt="logo"
+          className="object-cover lg:w-16 h-24"
         />
-        <Box display="flex">
-          <Pane marginTop={10} flexBasis={550}>
-            <Heading size={800}>เขียนเเบบไฟฟ้าด้วยคอมพิวเตอร์</Heading>
-            <Heading size={400} marginTop={5}>
-              ประกาศณียบัตรวิชาชีพชั้นสูง
-            </Heading>
-          </Pane>
-        </Box>
+        <Link className="p-1 ml-3" href="/">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M7 16l-4-4m0 0l4-4m-4 4h18"
+            />
+          </svg>
+        </Link>
+        <Pane flex={1}>
+          <Heading display="flex" size={800}>
+            เขียนเเบบไฟฟ้าด้วยคอมพิวเตอร์
+          </Heading>
+          <Heading size={400} marginTop={5}>
+            ประกาศณียบัตรวิชาชีพชั้นสูง
+          </Heading>
+        </Pane>
       </Pane>
     </Fragment>
   )

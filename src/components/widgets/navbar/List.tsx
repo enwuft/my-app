@@ -28,22 +28,6 @@ function NavList() {
           </Tablist>
         </Pane>
       </Flex>
-      {/* <Box>
-        <Pane padding={16} background="tint1" flex={1}>
-          {tabs.map((tab, index) => (
-            <Pane
-              key={tab}
-              id={`panel-${tab}`}
-              role="tabpanel"
-              aria-labelledby={tab}
-              aria-hidden={index !== selectedIndex}
-              display={index === selectedIndex ? 'block' : 'none'}
-            >
-              <Paragraph>Panel {tab}</Paragraph>
-            </Pane>
-          ))}
-        </Pane>
-      </Box> */}
     </Box>
   )
 }

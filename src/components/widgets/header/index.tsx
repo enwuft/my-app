@@ -6,17 +6,16 @@ import Image from 'next/image'
 export const Header: React.FC = () => {
   return (
     <React.Fragment>
-      <Pane margin={20} display="flex">
+      <Pane>
         <Image
           src="https://res.cloudinary.com/enwuft/image/upload/v1628959441/cad_wv2imb.png"
-          width="100"
-          height="100"
+          className="bg-cover w-full"
           alt="logo"
         />
-        <Pane padding={15} flex={1}>
-          <Heading size={700}>เขียนเเบไฟฟ้าด้วยคอมพิวเตอร์</Heading>
+        <Box padding={2}>
+          <Heading size={700}>เขียนเเบบไฟฟ้าด้วยคอมพิวเตอร์</Heading>
           <Text>ประกาศณียบัตรวิชาชีพชั้นสูง</Text>
-        </Pane>
+        </Box>
       </Pane>
     </React.Fragment>
   )
