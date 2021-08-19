@@ -18,10 +18,21 @@ const Layout = ({ children, title = 'Dashboard' }: Props) => {
         <title>{title}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Navbar />
-      <Flex justifyContent="center">
-        <Box width={7 / 8}>{children}</Box>
+
+      <Pane>
+        <Navbar />
+      </Pane>
+
+      <Flex
+        sx={{
+          maxWidth: 1024,
+          mx: 'auto',
+          px: 3
+        }}
+      >
+        <Box>{children}</Box>
       </Flex>
+
       <footer>
         <Footer />
       </footer>
