@@ -24,7 +24,7 @@ const Layout = ({ children, title = 'Dashboard' }: Props) => {
       <Navbar />
       <Pane>{children}</Pane>
 
-      <footer className="-mt-14">
+      <footer>
         <Footer />
       </footer>
     </Pane>

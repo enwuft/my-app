@@ -1,5 +1,4 @@
 import { Auth, Typography, Button } from '@supabase/ui'
-import { Pane, majorScale } from 'evergreen-ui'
 import { Box, Flex } from 'rebass'
 import Layout from '~/components/Layout'
 import { supabase } from '~/utils/initSupabase'
