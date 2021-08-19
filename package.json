@@ -25,14 +25,6 @@
     "rebass": "^4.0.7",
     "swr": "^0.5.6"
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,yml,yaml}": [
-      "eslint --cache --fix",
-      "jest --findRelatedTests"
-    ],
-    "*.css": "stylelint --fix",
-    "*.{js,jsx,ts,tsx,css,md}": "prettier --write"
-  },
   "devDependencies": {
     "@next/bundle-analyzer": "^11.0.1",
     "@types/jest": "^27.0.1",

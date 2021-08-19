@@ -10,7 +10,6 @@ import {
 } from 'evergreen-ui'
 import { Box, Flex } from 'rebass'
 
-import { Navbar } from '~/components/widgets'
 import Layout from '~/components/Layout'
 
 function Checkboxed() {
