@@ -8,3 +8,13 @@ export type User = {
   id: number
   name: string
 }
+
+export type Profile = {
+  id: string
+  avatar_url: string
+  username: string
+  frist_name: string
+  last_name: string
+  student_id: string
+  university: string
+}

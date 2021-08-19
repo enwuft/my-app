@@ -932,6 +932,16 @@
     "@supabase/realtime-js" "^1.1.2"
     "@supabase/storage-js" "^1.4.0"
 
+"@supabase/ui@^0.32.4":
+  version "0.32.4"
+  resolved "https://registry.yarnpkg.com/@supabase/ui/-/ui-0.32.4.tgz#09ac888fcef91c2aaa1c18c816b6e7503c891225"
+  integrity sha512-EmvnU7JVZcuvKs/jC/lsaH57aJ6RR7Ltz3HxEh6fSe1BvCjreoM29lruOCF7AFdLOLHN6JuvWTpNk0NBZ2sArg==
+  dependencies:
+    lodash "^4.17.20"
+    prop-types "^15.7.2"
+  optionalDependencies:
+    fsevents "^2.3.2"
+
 "@tootallnate/once@1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz#ccb91445360179a04e7fe6aff78c00ffc1eeaf82"

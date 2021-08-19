@@ -1,9 +1,12 @@
 import { Pane } from 'evergreen-ui'
+import type { NextPage } from 'next'
 
-export default function ServerErr() {
+const ServerErr: NextPage = () => {
   return (
     <Pane>
       <span>500 Server Error</span>
     </Pane>
   )
 }
+
+export default ServerErr

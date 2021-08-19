@@ -1,9 +1,10 @@
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
-import { Box, Flex } from 'rebass'
-import { Pane, Heading } from 'evergreen-ui'
+import { Pane, Heading, majorScale } from 'evergreen-ui'
 import Dymanic from 'next/dynamic'
+
 const Navbar = Dymanic(() => import('~/components/widgets/navbar'))
+import NProgressContainer from '~/components/shared/nprogress'
 // import { Navbar } from 'components/widgets'
 
 type Props = {
@@ -13,39 +14,29 @@ type Props = {
 
 const Layout = ({ children, title = 'Dashboard' }: Props) => {
   return (
-    <div>
+    <Pane>
       <Head>
         <title>{title}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <Pane>
-        <Navbar />
-      </Pane>
+      <NProgressContainer options={1} />
+      <Navbar />
+      <Pane>{children}</Pane>
 
-      <Flex
-        sx={{
-          maxWidth: 1024,
-          mx: 'auto',
-          px: 3
-        }}
-      >
-        <Box>{children}</Box>
-      </Flex>
-
-      <footer>
+      <footer className="-mt-14">
         <Footer />
       </footer>
-    </div>
+    </Pane>
   )
 }
 
 export default Layout
 
-export const Footer: React.FC = () => {
+const Footer: React.FC = () => {
   return (
-    <Pane justifyContent="center" display="flex">
-      <Heading size={400} color="#666666" justifyContent="space-evenly">
+    <Pane padding={majorScale(6)} backgroundColor="#101840">
+      <Heading size={600} justifyContent="space-evenly" color="#fffaed">
         Made with ♥ by PROGRAMMING.IN.TH team
       </Heading>
     </Pane>
