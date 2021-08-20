@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react'
 import Link from 'next/link'
 import { Pane, Heading, Tablist, Paragraph, Tab } from 'evergreen-ui'
-import { Box, Flex } from 'rebass'
+import { Box, Flex } from 'reflexbox'
 
 export const Header: React.FC = () => {
   return (

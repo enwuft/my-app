@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import React from 'react'
 import Link from 'next/link'
 import { Pane, Text, Heading } from 'evergreen-ui'
-import { Flex, Box } from 'rebass'
+import { Flex, Box } from 'reflexbox'
 import Layout from '~/components/Layout'
 import VLayout from '~/components/VLayout'
 
@@ -11,10 +11,10 @@ export const Index: NextPage = () => {
     <Layout title="Home">
       <VLayout>
         <Pane paddingTop={20} paddingBottom={20}>
-          <Heading size={900}>Upcomming...</Heading>
+          <Heading size={900}>รายการเเข่งขัน</Heading>
         </Pane>
-        <Pane className={'shadow-md p-1 bg-gray-50 rounded'}>
-          <Link href="/tournaments">
+        <Pane className={'border p-2'}>
+          <Link href="/tournament">
             <a>
               s Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ea
               voluptas amet, labore officiis natus expedita veniam illo?
@@ -23,7 +23,7 @@ export const Index: NextPage = () => {
             </a>
           </Link>
         </Pane>
-        <Pane marginTop={10} className={'shadow-md p-1 bg-gray-50 rounded'}>
+        <Pane marginTop={10} className={'border p-2'}>
           <Text>tab preview</Text>
         </Pane>
       </VLayout>

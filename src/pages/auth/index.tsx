@@ -1,5 +1,5 @@
 import { Auth, Typography, Button } from '@supabase/ui'
-import { Box, Flex } from 'rebass'
+import { Box, Flex } from 'reflexbox'
 import Layout from '~/components/Layout'
 import { supabase } from '~/utils/initSupabase'
 

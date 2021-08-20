@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react'
-import { Flex, Box } from 'rebass'
+import { Flex, Box } from 'reflexbox'
 import { Pane, Tab, Paragraph, Tablist, Heading } from 'evergreen-ui'
 import { Header } from '~/components/widgets'
 import Layout from '~/components/Layout'
@@ -13,7 +13,7 @@ const Tournament: React.FC = () => {
       <Pane>
         <NavList />
       </Pane>
-      <Flex className="flex bg-gray-50" justifyContent="center">
+      <Flex justifyContent="center">
         <Box width={[2 / 3]}>
           <Header />
         </Box>
