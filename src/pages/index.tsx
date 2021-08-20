@@ -68,6 +68,7 @@ export const Index: NextPage = () => {
             <div>
               <h3>Public Profiles</h3>
               <Account key={session.user.id} session={session} />
+              <span>{session.user}</span>
             </div>
           )}
         </Pane>

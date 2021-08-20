@@ -9,17 +9,17 @@ import UploadButton from './UploadButton'
 export default function Account({ session }: { session: AuthSession }) {
   const [loading, setLoading] = useState<boolean>(true)
   const [uploading, setUploading] = useState<boolean>(false)
-  const [username, setUsername] = useState<string | null>(null)
   const [avatar, setAvatar] = useState<string | null>(null)
+  const [username, setUsername] = useState<string | null>(null)
   const [website, setWebsite] = useState<string | null>(null)
 
   useEffect(() => {
     getProfile()
   }, [session])
 
-  async function singOut() {
+  async function signOut() {
     const { error } = await supabase.auth.signOut()
-    if (error) console.log('Err logging out', error.message)
+    if (error) console.log('Error logging out:', error.message)
   }
 
   async function uploadAvatar(event: ChangeEvent<HTMLInputElement>) {
@@ -27,7 +27,7 @@ export default function Account({ session }: { session: AuthSession }) {
       setUploading(true)
 
       if (!event.target.files || event.target.files.length == 0) {
-        throw 'You must select an image to upload'
+        throw 'You must select an image to upload.'
       }
 
       const user = supabase.auth.user()
@@ -85,7 +85,7 @@ export default function Account({ session }: { session: AuthSession }) {
 
       setProfile(data)
     } catch (error) {
-      console.error('error', error.message)
+      console.log('error', error.message)
     } finally {
       setLoading(false)
     }
@@ -104,7 +104,7 @@ export default function Account({ session }: { session: AuthSession }) {
       }
 
       let { error } = await supabase.from('profiles').upsert(updates, {
-        returning: 'minimal'
+        returning: 'minimal' // Don't return the value after inserting
       })
 
       if (error) {
@@ -129,6 +129,45 @@ export default function Account({ session }: { session: AuthSession }) {
         )}
       </Pane>
       <UploadButton onUpload={uploadAvatar} loading={uploading} />
+
+      <div>
+        <label htmlFor="email">Email</label>
+        <input id="email" type="text" value={session.user.email} disabled />
+      </div>
+      <div>
+        <label htmlFor="username">Name</label>
+        <input
+          id="username"
+          type="text"
+          value={username || ''}
+          onChange={e => setUsername(e.target.value)}
+        />
+      </div>
+      <div>
+        <label htmlFor="website">Website</label>
+        <input
+          id="website"
+          type="website"
+          value={website || ''}
+          onChange={e => setWebsite(e.target.value)}
+        />
+      </div>
+
+      <div>
+        <button
+          className="button block primary"
+          onClick={() => updateProfile()}
+          disabled={loading}
+        >
+          {loading ? 'Loading ...' : 'Update'}
+        </button>
+      </div>
+
+      <div>
+        <button className="button block" onClick={() => signOut()}>
+          Sign Out
+        </button>
+      </div>
     </div>
   )
 }

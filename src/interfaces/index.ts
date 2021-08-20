@@ -19,7 +19,7 @@ export type User = {
 //   university: string
 // }
 
-export const DEFAULT_AVATARS_BUCKET = 'avatars'
+export const DEFAULT_AVATARS_BUCKET = 'avatar'
 
 export type Profile = {
   id: string
