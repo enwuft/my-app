@@ -1,11 +1,15 @@
 import React from 'react'
 import type { AppProps } from 'next/app'
-import type { NextPage } from 'next'
-
+import NProgressContainer from '~/components/shared/nprogress'
 import '../assets/main.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <React.Fragment>
+      <NProgressContainer options={2} />
+      <Component {...pageProps} />
+    </React.Fragment>
+  )
 }
 
 export default MyApp
