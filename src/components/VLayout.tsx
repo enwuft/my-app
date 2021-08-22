@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { Flex, Box } from 'reflexbox'
+import { Flex, Box } from 'rebass'
 
 type Props = {
   children?: ReactNode

@@ -21,6 +21,7 @@
     "nprogress": "^0.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "rebass": "^4.0.7",
     "reflexbox": "^4.0.6",
     "swr": "^0.5.6"
   },
@@ -30,7 +31,7 @@
     "@types/nprogress": "^0.2.0",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
-    "@types/reflexbox": "^4.0.3",
+    "@types/rebass": "^4.0.9",
     "autoprefixer": "^10.3.1",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
