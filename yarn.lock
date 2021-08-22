@@ -1536,6 +1536,11 @@
     "@typescript-eslint/types" "4.29.2"
     eslint-visitor-keys "^2.0.0"
 
+"@zeit/next-workers@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@zeit/next-workers/-/next-workers-1.0.0.tgz#b2162884c9d4ec4308f2d1fa571a256b6d1a1ce1"
+  integrity sha512-klykVhp38AHAKV4oZAIv8ZoMju8Duhy22r82YUMkQzDXsrkhkJiM7KT7/ZlayhZQDpv+q1yLrZ0kotyGS/HZgg==
+
 "@zeit/schemas@2.6.0":
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/@zeit/schemas/-/schemas-2.6.0.tgz#004e8e553b4cd53d538bd38eac7bcbf58a867fe3"

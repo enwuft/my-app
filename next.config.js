@@ -1,6 +1,10 @@
 const withOffline = require('next-offline')
 const withPlugins = require('next-compose-plugins')
-const withBundleAnalyzer = require('@next/bundle-analyzer')
+const withWorkers = require('@zeit/next-workers')
+
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true'
+})
 
 const securityHeaders = [
   {
@@ -43,11 +47,15 @@ const nextConfig = {
 }
 
 module.exports = withPlugins(
-  [
-    withBundleAnalyzer({
-      enabled: process.env.ANALYZE === `true`
-    })
-  ],
-  withOffline,
-  nextConfig
+  [[withBundleAnalyzer], [withWorkers], [withOffline], [nextConfig]],
+  {
+    rewrites: async () => {
+      return [
+        {
+          source: '/sw.js',
+          destination: '/_next/static/sw.js'
+        }
+      ]
+    }
+  }
 )
