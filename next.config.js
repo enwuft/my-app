@@ -1,6 +1,6 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true'
-})
+const withOffline = require('next-offline')
+const withPlugins = require('next-compose-plugins')
+const withBundleAnalyzer = require('@next/bundle-analyzer')
 
 const securityHeaders = [
   {
@@ -42,4 +42,12 @@ const nextConfig = {
   }
 }
 
-module.exports = withBundleAnalyzer(nextConfig)
+module.exports = withPlugins(
+  [
+    withBundleAnalyzer({
+      enabled: process.env.ANALYZE === `true`
+    })
+  ],
+  withOffline,
+  nextConfig
+)

@@ -13,7 +13,12 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Boon';
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
 }
 
 a {
