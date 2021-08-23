@@ -6,7 +6,7 @@ import '../assets/main.css'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <React.Fragment>
-      <NProgressContainer options={2} />
+      <NProgressContainer options={{ minimum: 0.1 }} />
       <Component {...pageProps} />
     </React.Fragment>
   )

@@ -21,7 +21,12 @@ export default function Authentication() {
   return (
     <Layout title="Authentication">
       <Flex justifyContent="center" className={'h-screen'}>
-        <Box width={[1, 1 / 2, 1 / 2.5]} margin="2rem" height="full">
+        <Box
+          width={[1, 1 / 2, 1 / 2.5]}
+          margin="2rem"
+          overflowY="auto"
+          minHeight="100%"
+        >
           <Container supabaseClient={supabase}>
             <Auth
               supabaseClient={supabase}

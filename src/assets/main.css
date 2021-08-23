@@ -18,7 +18,10 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 5px;
+  width: 0.2rem;
+  height: 0.2rem;
+  color: #eeeefe;
+  background: #999;
 }
 
 a {

@@ -30,7 +30,7 @@ class NProgressContainer extends React.Component<NProgressContainerProps> {
 
   componentDidMount() {
     const { options } = this.props
-    if (options) {
+    if (!options) {
       nProgress.configure(options)
     }
 
