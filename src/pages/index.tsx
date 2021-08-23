@@ -10,6 +10,8 @@ import Layout from '~/components/Layout'
 import VLayout from '~/components/VLayout'
 import Account from '~/components/Account'
 
+import { Task } from '~/components/widgets'
+
 export const Index: NextPage = () => {
   const [session, setSession] = useState<AuthSession | null>(null)
   const [profiles, setProfiles] = useState<Profile[]>([])
@@ -61,7 +63,7 @@ export const Index: NextPage = () => {
             </a>
           </Link>
         </Pane>
-        <Pane marginTop={10} className={'border p-2'}>
+        <Pane marginTop={10} paddingBottom={20} className={'p-2'}>
           {!session ? (
             <Heading>Login pls</Heading>
           ) : (
@@ -71,6 +73,19 @@ export const Index: NextPage = () => {
               <span>{session.user}</span>
             </div>
           )}
+        </Pane>
+        <Pane className={'border'}>
+          <Task />
+        </Pane>
+        <Pane paddingTop={20} paddingBottom={20}>
+          <Link href="/tournament">
+            <a>
+              s Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ea
+              voluptas amet, labore officiis natus expedita veniam illo?
+              Provident asperiores debitis reprehenderit dolorem temporibus
+              magni officia aspernatur dolor hic repudiandae.
+            </a>
+          </Link>
         </Pane>
       </VLayout>
     </Layout>

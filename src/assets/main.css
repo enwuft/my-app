@@ -6,13 +6,28 @@
   font-family: 'Boon';
   font-style: normal;
   font-display: swap;
-  src: url(/fonts/Boon-Regular.woff2) format('woff2');
+  src: url('/fonts/Boon-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'sohne';
+  src: url('/fonts/sohne-400-normal.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'sohne';
+  src: url('/fonts/sohne-500-normal.woff') format('woff');
+  font-weight: 500;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
+  font-family: 'sohne' -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-style: normal;
   scroll-behavior: smooth;
   scrollbar-width: thin;
 }
