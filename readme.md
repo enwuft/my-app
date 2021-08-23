@@ -1,3 +1,5 @@
+[![Code Grade](https://www.code-inspector.com/project/26782/score/svg)](https://frontend.code-inspector.com/project/26782/dashboard)
+
 ### POC
 
 https://web.dev/code-splitting-with-dynamic-imports-in-nextjs/
