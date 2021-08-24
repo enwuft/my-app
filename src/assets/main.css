@@ -30,13 +30,22 @@ body {
   font-style: normal;
   scroll-behavior: smooth;
   scrollbar-width: thin;
+  overscroll-behavior-x: none;
+  -webkit-text-size-adjust: 100%;
 }
 
 body::-webkit-scrollbar {
   width: 0.2rem;
   height: 0.2rem;
-  color: #eeeefe;
-  background: #999;
+  color: #999;
+  background: #040404;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 40;
 }
 
 a {
