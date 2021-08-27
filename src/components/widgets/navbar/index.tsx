@@ -2,7 +2,16 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { Fragment } from 'react'
 import Link from 'next/link'
-import { Pane, majorScale, UserIcon, Tooltip } from 'evergreen-ui'
+import {
+  Pane,
+  majorScale,
+  UserIcon,
+  Popover,
+  Menu,
+  toaster,
+  Button
+} from 'evergreen-ui'
+import toast, { Toaster } from 'react-hot-toast'
 
 export default function Navbar() {
   return (
@@ -22,18 +31,44 @@ export default function Navbar() {
             />
           </Link>
         </Pane>
-        <Tooltip content="Authenticaion as admin">
-          <Pane
-            className={'mx-auto cursor-pointer'}
-            display="flex"
-            paddingRight={majorScale(1)}
-            alignItems="center"
+        <Pane
+          className={'mx-auto cursor-pointer'}
+          display="flex"
+          paddingRight={majorScale(2)}
+          alignItems="center"
+        >
+          <Popover
+            // position={Position.BOTTOM_LEFT}
+            content={
+              <Menu>
+                <Menu.Group>
+                  <Menu.Item onSelect={() => toast.success('Share')}>
+                    Profile
+                  </Menu.Item>
+                  <Menu.Item onSelect={() => toast.success('User')}>
+                    User
+                  </Menu.Item>
+                  <Menu.Item onSelect={() => toast.success('Setting')}>
+                    Setting
+                  </Menu.Item>
+                </Menu.Group>
+                <Menu.Divider />
+                <Menu.Group>
+                  <Menu.Item
+                    onSelect={() => toast.success('Sign Out')}
+                    intent="danger"
+                  >
+                    Sign Out
+                  </Menu.Item>
+                </Menu.Group>
+              </Menu>
+            }
           >
-            <Link href="/auth">
-              <UserIcon color="#fff" size={20} />
-            </Link>
-          </Pane>
-        </Tooltip>
+            <button>
+              <UserIcon color="#fff" size={24} />
+            </button>
+          </Popover>
+        </Pane>
       </Pane>
     </Fragment>
   )

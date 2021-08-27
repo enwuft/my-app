@@ -1,5 +1,6 @@
+import type { NextApiRequest, NextApiResponse } from 'next'
 import { supabase } from 'utils/initSupabase'
 
-export default function handler(req: any, res: any) {
-  supabase.auth.api.setAuthCookie(req, res)
+export const handler = (req: NextApiRequest, res: NextApiResponse): void => {
+  supabase.auth.api.getUserByCookie(req, res)
 }

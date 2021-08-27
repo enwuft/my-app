@@ -30,22 +30,17 @@ body {
   font-style: normal;
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  overscroll-behavior-x: none;
-  -webkit-text-size-adjust: 100%;
 }
-
+body::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 16%;
+}
 body::-webkit-scrollbar {
-  width: 0.2rem;
-  height: 0.2rem;
-  color: #999;
-  background: #040404;
-}
-::-webkit-scrollbar-thumb {
-  -webkit-transition: 0.3s ease all;
-  transition: 0.3s ease all;
-  border-color: transparent;
-  background-color: rgba(255, 255, 255, 0.1);
-  z-index: 40;
+  width: 0.3rem;
+  height: 0.3rem;
+  background-color: rgb(224, 224, 224);
+  display: block;
+  overflow: auto;
 }
 
 a {

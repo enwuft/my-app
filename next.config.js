@@ -1,6 +1,7 @@
 const withOffline = require('next-offline')
 const withPlugins = require('next-compose-plugins')
 const withWorkers = require('@zeit/next-workers')
+const withTM = require('next-transpile-modules')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
@@ -47,7 +48,7 @@ const nextConfig = {
 }
 
 module.exports = withPlugins(
-  [[withBundleAnalyzer], [withWorkers], [withOffline], [nextConfig]],
+  [[withBundleAnalyzer], [withWorkers], [withOffline], [nextConfig], [withTM]],
   {
     rewrites: async () => {
       return [

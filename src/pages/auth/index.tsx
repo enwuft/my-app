@@ -3,6 +3,8 @@ import { Box, Flex } from 'reflexbox'
 import Layout from '~/components/Layout'
 import { supabase } from '~/utils/initSupabase'
 
+const PUBLIC_PATHS = ['/auth', '404']
+
 const Container = props => {
   const { user } = Auth.useUser()
   if (user)

@@ -1,7 +1,8 @@
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { Pane, Heading, majorScale, Paragraph, Tooltip } from 'evergreen-ui'
+import { Pane, Heading, majorScale, Tooltip } from 'evergreen-ui'
+import { Box } from 'rebass'
 import Dymanic from 'next/dynamic'
 
 // import { Navbar } from 'components/widgets'
@@ -38,23 +39,29 @@ export default Layout
 const Footer: React.FC = () => {
   return (
     <Pane
-      display="flex"
-      justifyContent="space-between"
       alignItems="center"
-      padding={majorScale(6)}
+      paddingBottom={majorScale(5)}
+      paddingTop={majorScale(3)}
       backgroundColor="#101840"
     >
-      <Heading size={600} color="#fffaed">
-        Made with ♥ by PROGRAMMING.IN.TH team
-      </Heading>
-
-      <Tooltip content="เเสดงความคิดเห็น หรือเพิ่มฟีเจอร์ใหม่ๆได้ที่ Github">
-        <Heading justifyContent="right" size={600} color="#fffaed">
-          <Link href="https://github.com/enwuft/my-app/issues/new">
-            <a target="_blank">Request for Comment</a>
-          </Link>
+      <Box
+        display="flex"
+        justifyContent="space-between"
+        className="container mx-auto"
+        paddingLeft={majorScale(3)}
+      >
+        <Heading size={600} color="#fffaed">
+          Made with ♥ by PROGRAMMING.IN.TH team
         </Heading>
-      </Tooltip>
+
+        <Tooltip content="เเสดงความคิดเห็น หรือเพิ่มฟีเจอร์ใหม่ๆได้ที่ Github">
+          <Heading justifyContent="right" size={600} color="#fffaed">
+            <Link href="https://github.com/enwuft/my-app/issues/new">
+              <a target="_blank">Request for Comment</a>
+            </Link>
+          </Heading>
+        </Tooltip>
+      </Box>
     </Pane>
   )
 }

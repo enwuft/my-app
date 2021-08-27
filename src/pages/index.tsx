@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
-import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Pane, Text, Heading } from 'evergreen-ui'
+import React, { useState, useEffect } from 'react'
+import { Pane, Text, Heading, toaster } from 'evergreen-ui'
 import { AuthSession } from '@supabase/supabase-js'
 import { supabase } from '~/utils/initSupabase'
 import { Profile } from '~/interfaces'
@@ -40,29 +40,16 @@ export const Index: NextPage = () => {
       if (error || !data) {
         throw error || new Error('No data')
       }
-      console.log('Public profiles:', data)
       setProfiles(data)
     } catch (error) {
-      console.log('error', error.message)
+      toaster.warning(error.message)
     }
   }
 
   return (
     <Layout title="Home">
+      {/* VLayout for container /components/VLayout */}
       <VLayout>
-        <Pane paddingTop={20} paddingBottom={20}>
-          <Heading size={900}>รายการเเข่งขัน</Heading>
-        </Pane>
-        <Pane className={'border p-2'}>
-          <Link href="/tournament">
-            <a>
-              s Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ea
-              voluptas amet, labore officiis natus expedita veniam illo?
-              Provident asperiores debitis reprehenderit dolorem temporibus
-              magni officia aspernatur dolor hic repudiandae.
-            </a>
-          </Link>
-        </Pane>
         <Pane marginTop={10} paddingBottom={20} className={'p-2'}>
           {!session ? (
             <Heading>Login pls</Heading>
