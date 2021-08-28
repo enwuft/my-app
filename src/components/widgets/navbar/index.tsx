@@ -1,11 +1,24 @@
 /* eslint-disable @next/next/link-passhref */
 /* eslint-disable @next/next/no-img-element */
-import React, { Fragment } from 'react'
+import { Fragment, useEffect, useState } from 'react'
+import type { GetServerSideProps } from 'next'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { AuthSession } from '@supabase/supabase-js'
 import { Pane, majorScale, UserIcon, Popover, Menu } from 'evergreen-ui'
-import toast from 'react-hot-toast'
+import { supabase } from '~/utils/initSupabase'
 
 export default function Navbar() {
+  const router = useRouter()
+  const [session, setSession] = useState<AuthSession | null>(null)
+  useEffect(() => {
+    setSession(supabase.auth.session())
+    supabase.auth.onAuthStateChange(
+      (_event: string, session: AuthSession | null) => {
+        setSession(session)
+      }
+    )
+  }, [])
   return (
     <Fragment>
       <Pane
@@ -34,20 +47,20 @@ export default function Navbar() {
             content={
               <Menu>
                 <Menu.Group>
-                  <Menu.Item onSelect={() => toast.success('Share')}>
+                  <Menu.Item onSelect={() => router.push('/profile')}>
                     Profile
                   </Menu.Item>
-                  <Menu.Item onSelect={() => toast.success('User')}>
+                  <Menu.Item onSelect={() => router.push('/user')}>
                     User
                   </Menu.Item>
-                  <Menu.Item onSelect={() => toast.success('Setting')}>
+                  <Menu.Item onSelect={() => router.push('/setting')}>
                     Setting
                   </Menu.Item>
                 </Menu.Group>
                 <Menu.Divider />
                 <Menu.Group>
                   <Menu.Item
-                    onSelect={() => toast.success('Sign Out')}
+                    onSelect={() => router.push('/auth')}
                     intent="danger"
                   >
                     Sign Out
@@ -58,10 +71,19 @@ export default function Navbar() {
           >
             <button>
               <UserIcon color="#fff" size={24} />
+              {session?.user}
             </button>
           </Popover>
         </Pane>
       </Pane>
     </Fragment>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async context => {
+  const { user } = await supabase.auth.api.getUserByCookie(context.req)
+
+  if (user)
+    return { props: {}, redirect: { destination: '/auth', permanent: false } }
+  return { props: { user } }
 }
