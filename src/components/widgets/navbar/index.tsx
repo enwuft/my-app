@@ -2,16 +2,8 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { Fragment } from 'react'
 import Link from 'next/link'
-import {
-  Pane,
-  majorScale,
-  UserIcon,
-  Popover,
-  Menu,
-  toaster,
-  Button
-} from 'evergreen-ui'
-import toast, { Toaster } from 'react-hot-toast'
+import { Pane, majorScale, UserIcon, Popover, Menu } from 'evergreen-ui'
+import toast from 'react-hot-toast'
 
 export default function Navbar() {
   return (
