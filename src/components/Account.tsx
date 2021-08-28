@@ -15,7 +15,7 @@ export default function Account({ session }: { session: AuthSession }) {
 
   useEffect(() => {
     getProfile()
-  }, [session])
+  }, [])
 
   async function signOut() {
     const { error } = await supabase.auth.signOut()

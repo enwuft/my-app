@@ -13,15 +13,13 @@
     "test": "jest --passWithNoTests"
   },
   "dependencies": {
+    "@lottiefiles/lottie-player": "^1.1.1",
     "@supabase/supabase-js": "^1.21.0",
-<<<<<<< HEAD
-    "@supabase/ui": "^0.32.4",
+    "@supabase/ui": "^0.34.1",
     "cookie": "^0.4.1",
     "crypto": "^1.0.1",
-=======
-    "@supabase/ui": "^0.34.1",
->>>>>>> 75ce3999126214b2aa22d4fcaf2444a8c56e9db5
     "evergreen-ui": "^6.3.0",
+    "moment": "^2.29.1",
     "next": "^11.1.0",
     "next-offline": "^5.0.5",
     "next-transpile-modules": "^8.0.0",
@@ -35,12 +33,14 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^11.0.1",
+    "@types/antd": "^1.0.0",
     "@types/node": "^16.6.1",
     "@types/nprogress": "^0.2.0",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
     "@types/rebass": "^4.0.9",
     "@zeit/next-workers": "^1.0.0",
+    "antd": "^4.16.13",
     "autoprefixer": "^10.3.1",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",

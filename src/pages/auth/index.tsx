@@ -1,42 +1,46 @@
-import { Auth, Typography, Button } from '@supabase/ui'
-import { Box, Flex } from 'reflexbox'
+import type { NextPage, GetServerSideProps } from 'next'
+import React, { useRef } from 'react'
+import { Heading, Pane } from 'evergreen-ui'
+import { Flex, Box } from 'rebass'
+
 import Layout from '~/components/Layout'
 import { supabase } from '~/utils/initSupabase'
 
-const PUBLIC_PATHS = ['/auth', '404']
-
-const Container = props => {
-  const { user } = Auth.useUser()
-  if (user)
-    return (
-      <>
-        <Typography.Text>Signed in: {user.email}</Typography.Text>
-        <Button block onClick={() => props.supabaseClient.auth.signOut()}>
-          Sign out
-        </Button>
-      </>
-    )
-  return props.children
-}
-
-export default function Authentication() {
+const Authentication: NextPage = () => {
+  const ref = useRef(null)
+  React.useEffect(() => {
+    import('@lottiefiles/lottie-player')
+  })
   return (
     <Layout title="Authentication">
-      <Flex justifyContent="center" className={'h-screen'}>
-        <Box
-          width={[1, 1 / 2, 1 / 2.5]}
-          margin="2rem"
-          overflowY="auto"
-          minHeight="100%"
-        >
-          <Container supabaseClient={supabase}>
-            <Auth
-              supabaseClient={supabase}
-              providers={['google', 'facebook']}
-            />
-          </Container>
+      <Flex justifyContent="center" padding={80} className={'h-screen'}>
+        <Box width={[1, 1 / 2, 1 / 2.5]} marginTop="4rem">
+          <Heading size={900}>
+            If you need to login. Request an magic link from contributor.
+          </Heading>
+        </Box>
+        <Box>
+          <lottie-player
+            id="firstLottie"
+            ref={ref}
+            autoplay
+            loop
+            mode="normal"
+            src="https://assets5.lottiefiles.com/packages/lf20_4eynavd0.json"
+            style={{ width: '450px', height: '450px' }}
+          ></lottie-player>
         </Box>
       </Flex>
     </Layout>
   )
+}
+
+export default Authentication
+
+export const getServerSideProps: GetServerSideProps = async context => {
+  const { user } = await supabase.auth.api.getUserByCookie(context.req)
+
+  if (user)
+    return { props: {}, redirect: { destination: '/', permanent: false } }
+  return { props: {} }
 }
