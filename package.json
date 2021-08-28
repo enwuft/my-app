@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^1.21.0",
-    "@supabase/ui": "^0.32.4",
+    "@supabase/ui": "^0.34.1",
     "evergreen-ui": "^6.3.0",
     "next": "^11.1.0",
     "next-offline": "^5.0.5",
