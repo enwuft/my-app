@@ -14,9 +14,13 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^1.21.0",
+<<<<<<< HEAD
     "@supabase/ui": "^0.32.4",
     "cookie": "^0.4.1",
     "crypto": "^1.0.1",
+=======
+    "@supabase/ui": "^0.34.1",
+>>>>>>> 75ce3999126214b2aa22d4fcaf2444a8c56e9db5
     "evergreen-ui": "^6.3.0",
     "next": "^11.1.0",
     "next-offline": "^5.0.5",
@@ -27,7 +31,7 @@
     "react-hot-toast": "^2.1.1",
     "rebass": "^4.0.7",
     "reflexbox": "^4.0.6",
-    "swr": "^0.5.6"
+    "swr": "^1.0.0"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^11.0.1",
