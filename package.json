@@ -9,13 +9,16 @@
     "lint": "next lint",
     "analyze": "cross-env ANALYZE=true yarn build",
     "serve": "serve .next/analyze",
-    "type-check": "tsc",
-    "test": "jest --passWithNoTests"
+    "type-check": "tsc --pretty --noEmit",
+    "format": "prettier --write .",
+    "eslint": "eslint src --fix",
+    "test-all": "yarn lint && yarn type-check && yarn test"
   },
   "dependencies": {
     "@lottiefiles/lottie-player": "^1.1.1",
     "@supabase/supabase-js": "^1.21.0",
     "@supabase/ui": "^0.34.1",
+    "antd": "^4.16.13",
     "cookie": "^0.4.1",
     "crypto": "^1.0.1",
     "evergreen-ui": "^6.3.0",
@@ -28,7 +31,6 @@
     "react-dom": "^17.0.2",
     "react-hot-toast": "^2.1.1",
     "rebass": "^4.0.7",
-    "reflexbox": "^4.0.6",
     "swr": "^1.0.0"
   },
   "devDependencies": {
@@ -40,14 +42,14 @@
     "@types/react-dom": "^17.0.1",
     "@types/rebass": "^4.0.9",
     "@zeit/next-workers": "^1.0.0",
-    "antd": "^4.16.13",
     "autoprefixer": "^10.3.1",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
-    "eslint-config-next": "^11.0.1",
+    "eslint-config-next": "^11.1.0",
     "next-compose-plugins": "^2.2.1",
     "postcss": "^8.3.6",
     "prettier": "^2.3.2",
+    "react-test-renderer": "^17.0.2",
     "serve": "^12.0.0",
     "tailwindcss": "^2.2.7",
     "typescript": "^4.3.5"

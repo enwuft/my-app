@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { Pane } from 'evergreen-ui'
-import { supabase } from '~/utils/initSupabase'
 
 import Layout from '~/components/Layout'
 import VLayout from '~/components/VLayout'
@@ -18,7 +17,6 @@ const Index: NextPage = () => {
   }, [])
   return (
     <Layout title="Home">
-      {/* VLayout for container /components/VLayout */}
       <VLayout>
         {/* <Pane marginTop={10} paddingBottom={20} className={'p-2'}></Pane> */}
         <Pane marginTop={20} className={'border'}>
@@ -40,11 +38,3 @@ const Index: NextPage = () => {
 }
 
 export default Index
-
-export const getServerSideProps: GetServerSideProps = async context => {
-  const { user } = await supabase.auth.api.getUserByCookie(context.req)
-
-  if (user)
-    return { props: {}, redirect: { destination: '/auth', permanent: false } }
-  return { props: {} }
-}
