@@ -15,7 +15,7 @@
     "test-all": "yarn lint && yarn type-check && yarn test"
   },
   "dependencies": {
-    "@lottiefiles/lottie-player": "^1.1.1",
+    "@lottiefiles/lottie-player": "^1.4.1",
     "@supabase/supabase-js": "^1.21.0",
     "@supabase/ui": "^0.34.1",
     "antd": "^4.16.13",

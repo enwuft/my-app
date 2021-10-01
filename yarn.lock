@@ -1129,10 +1129,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.0.tgz#87de7af9c231826fdd68ac7258f77c429e0e5fcf"
   integrity sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==
 
-"@lottiefiles/lottie-player@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@lottiefiles/lottie-player/-/lottie-player-1.1.1.tgz#c1ce81159dbb36b4a108bc7cbf3a091040a4763e"
-  integrity sha512-V6V9PQsIbCq/A97djFRYwxrCYDS9mEID7Zp0f7oRY/d+o0/dqYhAF49JX+uQ6aJhpFVlsTW+BRGsmfJhRnvRsQ==
+"@lottiefiles/lottie-player@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@lottiefiles/lottie-player/-/lottie-player-1.4.1.tgz#f3df1d0c57a0979b5c56329b35ecc7a663c04808"
+  integrity sha512-ZlzByCGL1mRFVOR1Go6EaangOKycHgSimb4J92cnqgmRy38pc3ffQwO/3crOSe21EDlRyQ3CMGW8jn3jUFrEMA==
   dependencies:
     "@types/pako" "^1.0.1"
     lit-element "^2.3.1"
