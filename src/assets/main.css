@@ -15,10 +15,9 @@ body {
 }
 body::-webkit-scrollbar-thumb {
   background: #999;
-  border-radius: 16%;
 }
 body::-webkit-scrollbar {
-  width: 0.3rem;
+  width: 0.35rem;
   height: 0.3rem;
   background-color: rgb(224, 224, 224);
   display: block;

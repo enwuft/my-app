@@ -25,6 +25,7 @@ const securityHeaders = [
 ]
 
 const nextConfig = {
+  swcMinify: true, // next 12 using SWC compiler instead
   reactStrictMode: true,
   typescript: {
     ignoreBuildErrors: true
