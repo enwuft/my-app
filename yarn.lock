@@ -1431,10 +1431,10 @@
     "@supabase/realtime-js" "^1.2.1"
     "@supabase/storage-js" "^1.4.0"
 
-"@supabase/ui@^0.34.1":
-  version "0.34.4"
-  resolved "https://registry.yarnpkg.com/@supabase/ui/-/ui-0.34.4.tgz#4c1db38906dc331c2dcaacdcd24f958752871ae8"
-  integrity sha512-gkTwrikChKnLoO6ZCZs/48pV07DiIjMdnn5shztNJ6mg3rwzIEMmHmzmE1QwcXNSZAZBSObaK52xblhp7OYCjg==
+"@supabase/ui@^0.35.0":
+  version "0.35.0"
+  resolved "https://registry.yarnpkg.com/@supabase/ui/-/ui-0.35.0.tgz#6b2fbb16c11131b180cc8c189d7317294f032ac7"
+  integrity sha512-bftQoDcX2Vl6Gcu6IYUjteN7ZKNs5YhvhOz3c/8kTYU6DuD33VKOYCMQBKwU4IuBbEsNXVRlJxHK4RjXIiS4ww==
   dependencies:
     lodash "^4.17.20"
     prop-types "^15.7.2"
