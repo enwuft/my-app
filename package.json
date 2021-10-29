@@ -40,7 +40,7 @@
     "@types/react-dom": "^17.0.1",
     "@types/rebass": "^4.0.9",
     "@zeit/next-workers": "^1.0.0",
-    "autoprefixer": "^10.3.1",
+    "autoprefixer": "^10.4.0",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.0",
