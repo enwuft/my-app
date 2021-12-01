@@ -36,6 +36,7 @@ export default function Navbar() {
             />
           </Link>
         </Pane>
+
         <Pane
           className={'mx-auto cursor-pointer'}
           display="flex"
@@ -49,12 +50,6 @@ export default function Navbar() {
                 <Menu.Group>
                   <Menu.Item onSelect={() => router.push('/admin')}>
                     Profile
-                  </Menu.Item>
-                  <Menu.Item onSelect={() => router.push('/users')}>
-                    User
-                  </Menu.Item>
-                  <Menu.Item onSelect={() => router.push('/setting')}>
-                    Setting
                   </Menu.Item>
                 </Menu.Group>
                 <Menu.Divider />

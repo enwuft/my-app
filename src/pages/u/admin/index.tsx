@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
-import { useState, useEffect, ChangeEvent } from 'react'
-import { Pane, Avatar, toaster, Text } from 'evergreen-ui'
-import { Flex, Box } from 'rebass'
+import { useState } from 'react'
+import { Pane, toaster, Button, EditIcon } from 'evergreen-ui'
 
 import { supabase } from '~/utils/initSupabase'
 import { AuthSession } from '@supabase/supabase-js'
@@ -50,7 +49,7 @@ const SideBar = () => {
         <UserSetting />
       </Pane>
       <Pane className={'hover:bg-gray-200 p-2 inline-block cursor-pointer'}>
-        Authorization
+        Permission
       </Pane>
     </Pane>
   )
@@ -77,9 +76,9 @@ const UserSetting = () => {
   return (
     <Pane>
       <div className={'text-red-400'}>User Setting</div>
-      <ul>
-        <li>{options.title}</li>
-      </ul>
+      <Button marginY={8} marginRight={12} iconBefore={EditIcon}>
+        <span>{options.title}</span>
+      </Button>
     </Pane>
   )
 }
