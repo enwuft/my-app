@@ -2,7 +2,6 @@ import React, { ReactNode } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { Pane, Heading, majorScale, Tooltip } from 'evergreen-ui'
-import { Box } from 'rebass'
 import Dymanic from 'next/dynamic'
 
 // import { Navbar } from 'components/widgets'
@@ -25,7 +24,7 @@ const Layout = ({ children, title = 'Dashboard' }: Props) => {
         <Navbar />
       </header>
 
-      <Pane>{children}</Pane>
+      <Pane className={'container mx-auto'}>{children}</Pane>
 
       <footer>
         <Footer />
@@ -44,11 +43,11 @@ const Footer: React.FC = () => {
       paddingTop={majorScale(3)}
       backgroundColor="#101840"
     >
-      <Box
+      <Pane
+        className={'-pl-4 container mx-auto'}
         display="flex"
         justifyContent="space-between"
-        className="container mx-auto"
-        paddingLeft={majorScale(3)}
+        // paddingLeft={majorScale(3)}
       >
         <Heading size={600} color="#fffaed">
           Made with ♥ by PROGRAMMING.IN.TH team
@@ -61,7 +60,7 @@ const Footer: React.FC = () => {
             </Link>
           </Heading>
         </Tooltip>
-      </Box>
+      </Pane>
     </Pane>
   )
 }

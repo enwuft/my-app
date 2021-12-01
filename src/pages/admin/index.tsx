@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import { useState, useEffect, ChangeEvent } from 'react'
-import toast from 'react-hot-toast'
-import { Pane, Avatar } from 'evergreen-ui'
+import { Pane, Avatar, toaster, Text } from 'evergreen-ui'
 import { Flex, Box } from 'rebass'
 
 import { supabase } from '~/utils/initSupabase'
@@ -19,24 +18,68 @@ export default function Account({ session }: { session: AuthSession }) {
   async function SignOut() {
     const { error } = await supabase.auth.signOut()
     if (error) {
-      return toast.success('Error Sign Out')
+      return toaster.success('Error Sign Out')
     }
   }
 
   return (
     <Layout>
-      <Flex
-        sx={{
-          // maxWidth: 1024,
-          maxWidth: 1100,
-          mx: 'auto',
-          px: 3
-        }}
-      >
-        <Box className={'border p-2'}>
-          <span>ssdf</span>
-        </Box>
-      </Flex>
+      <Pane className={'flex pl-4 pt-10'}>
+        <div className="text-3xl font-sans font-semibold">Dashboard</div>
+      </Pane>
+      <Pane className={''}>
+        <SideBar />
+      </Pane>
     </Layout>
+  )
+}
+
+const SideBar = () => {
+  const List = {
+    id: 1,
+    title: 'Profile'
+  }
+  return (
+    <Pane className={'font-medium m-3 block space-x-5'}>
+      <Pane className={'hover:bg-gray-200 p-2 inline-block cursor-pointer'}>
+        Profile
+        <Profile />
+      </Pane>
+      <Pane className={'hover:bg-gray-200 p-2 inline-block cursor-pointer'}>
+        Setting
+        <UserSetting />
+      </Pane>
+      <Pane className={'hover:bg-gray-200 p-2 inline-block cursor-pointer'}>
+        Authorization
+      </Pane>
+    </Pane>
+  )
+}
+
+const Profile = () => {
+  const userProfile = {
+    id: 1,
+    name: 'admin'
+  }
+  return (
+    <Pane>
+      <div className={'text-red-400'}>{userProfile.name}</div>
+    </Pane>
+  )
+}
+
+const UserSetting = () => {
+  const options = {
+    id: 1,
+    level: 'กรรมการ',
+    title: 'Upload Profile'
+  }
+  return (
+    <Pane>
+      <div className={'text-red-400'}>User Setting</div>
+      <ul>
+        <li>{options.title}</li>
+      </ul>
+    </Pane>
   )
 }

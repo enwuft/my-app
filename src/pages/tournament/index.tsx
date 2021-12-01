@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment } from 'react'
 import { Flex, Box } from 'reflexbox'
 import { Pane, Tab, Paragraph, Tablist, Heading } from 'evergreen-ui'
 import { Header } from '~/components/widgets'

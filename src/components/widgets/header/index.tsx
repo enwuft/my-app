@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { Fragment } from 'react'
+import React from 'react'
 import Link from 'next/link'
-import { Pane, Heading, Tablist, Paragraph, Tab } from 'evergreen-ui'
-import { Box, Flex } from 'reflexbox'
+import { Pane, Heading } from 'evergreen-ui'
 
 export const Header: React.FC = () => {
   return (

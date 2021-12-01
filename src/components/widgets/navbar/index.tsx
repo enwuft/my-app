@@ -47,10 +47,10 @@ export default function Navbar() {
             content={
               <Menu>
                 <Menu.Group>
-                  <Menu.Item onSelect={() => router.push('/profile')}>
+                  <Menu.Item onSelect={() => router.push('/admin')}>
                     Profile
                   </Menu.Item>
-                  <Menu.Item onSelect={() => router.push('/user')}>
+                  <Menu.Item onSelect={() => router.push('/users')}>
                     User
                   </Menu.Item>
                   <Menu.Item onSelect={() => router.push('/setting')}>

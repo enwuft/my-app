@@ -13,7 +13,12 @@ const Authentication: NextPage = () => {
   })
   return (
     <Layout title="Authentication">
-      <Flex justifyContent="center" padding={80} className={'h-screen'}>
+      <Flex
+        justifyContent="center"
+        padding={80}
+        className={'h-screen'}
+        marginTop="4rem"
+      >
         <Box width={[1, 1 / 2, 1 / 2.5]} marginTop="4rem">
           <Heading size={900}>
             If you need to login. Request an magic link from contributor.

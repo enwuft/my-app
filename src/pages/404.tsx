@@ -7,10 +7,12 @@ export const FourOhFour: NextPage = () => {
   return (
     <Layout title="Page Not Found!">
       <Pane height="100vh">
-        <h1>404 - Page Not Found</h1>
-        <Link href="/">
-          <a>Go back home</a>
-        </Link>
+        <div className="text-center align-center justify-content-center">
+          <h1>404 - Page Not Found</h1>
+          <Link href="/">
+            <a>Go back home</a>
+          </Link>
+        </div>
       </Pane>
     </Layout>
   )
