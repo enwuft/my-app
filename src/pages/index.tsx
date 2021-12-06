@@ -8,6 +8,7 @@ import Layout from '~/components/Layout'
 import VLayout from '~/components/VLayout'
 
 import { Task } from '~/components/widgets'
+import { supabase } from '~/utils/initSupabase'
 
 const Index: NextPage = () => {
   const router = useRouter()
@@ -23,7 +24,7 @@ const Index: NextPage = () => {
           <Task />
         </Pane>
         <Pane paddingTop={20} paddingBottom={20}>
-          <Link href="/tournament">
+          <Link href="/u/tournament">
             <a>
               s Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ea
               voluptas amet, labore officiis natus expedita veniam illo?
@@ -38,3 +39,13 @@ const Index: NextPage = () => {
 }
 
 export default Index
+
+export const getServerSideProps: GetServerSideProps = async context => {
+  const { user } = await supabase.auth.api.getUserByCookie(context.req)
+  if (user)
+    return {
+      props: {},
+      redirect: { destination: '/u/tournament', permanent: false }
+    }
+  return { props: {} }
+}
